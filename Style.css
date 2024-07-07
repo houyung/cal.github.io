@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s case;
+
+}
+a{
+    text-emphasis: none;
+    color: #fff;
+}
+body{
+    background-image: linear-gradient(to bottom right,rgb(130, 48, 201),rgb(172,31,146));
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.calculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow:0 0 30px #000;
+}
+.theme-toggler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+}
+.theme-toggler.active{
+    color:#333;
+}
+.theme-toggler.active::before{
+    background-color:#fff;
+}
+/* ប្រើសម្រាប់បង្រួមទំហំbackground button load */
+.theme-toggler :before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: green;
+    z-index: -1;
+}
+/* ប្រើសម្រាប់បង្រួមទំហំbackground​calculator */
+#display{
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+#display::-webkit-scrollbar{
+    display: block;
+    height: 3;
+
+}
+/* ប្រើសម្រាប់button អោយរង្វង់មូល */
+button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+/* ប្រើសម្រាប់ចុចឃើញលូត */
+button:hover{
+    transform: scale(1.2);
+}
+
+/* ប្រើសម្រាប់ផ្ទាំងទី១ */
+.calculator{
+    background-color: black;
+    color: white;
+}
+.calculator#display{
+    color:white;
+}
+.calculator button#clear{
+    background-color:gray;
+    color: white;
+}
+.calculator button#backspace{
+    background-color:gray;
+    color: white;
+}
+.calculator button.btn-number{
+    background-color: #333;
+    color:white;
+}
+.calculator button.btn-oprator{
+    background-color:orange;
+    color: white;
+}
+.calculator button.btn-equal{
+    background-color: orange;
+    color:white;
+}
+.calculator.dark{
+    background-color: #071115;
+}
+.calculator.dark#display{
+    color: white;
+}
+.calculator.dark button#clear{
+    background-color:gray;
+    color: white;
+}
+.calculator.dark button#backspace{
+    background-color: gray;
+    color: white;
+}
+/* ប្រើសម្រាប់ផ្ទាំងទី២ */
+.calculator.dark{
+    background-color: white;
+    color: black;
+}
+.calculator.dark#display{
+    color:white;
+}
+.calculator.dark button#clear{
+    background-color: gray;
+    color: white;
+}
+.calculator.dark button.btn-number{
+    background-color: #333;
+    color: #f8fafb;
+}
+.calculator.dark button.btn-oprator{
+    background-color:blue;
+    color: white;
+}
+.calculator.dark button.btn-equal{
+    background-color: blue;
+    color: #ffffff;
+}
+
+
+
+
